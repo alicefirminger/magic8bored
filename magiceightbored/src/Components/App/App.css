@@ -1,47 +1,115 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+
+.App .contentContainer {
 	text-align: center;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-  font-size: 18px;
+	font-size: 18px;
+	font-family: "Luckiest Guy", cursive;
+}
+
+.header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+	width: 100vw;
+	color: white;
+	height: 10vh;
+	font-size: 1.8rem;
+	font-weight: 100;
+}
+
+.footer {
+	background-color: black;
+	width: 100vw;
+	color: white;
+	bottom: 0;
+	position: fixed;
+	height: 7vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 2rem;
 }
 
 .magicBall {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-	height: 300px;
-	width: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 500px;
+	width: 500px;
 	border-radius: 50%;
-  background-image: url("./ball.png");
-  background-size: cover;
-  text-align: center;
-  color: white;
+	background-image: url("./ball.png");
+	background-size: cover;
+	text-align: center;
+	color: white;
 }
 
 .activity {
-  width: 10vw;
-  font-size: 0.7rem;
+	width: 10vw;
+	font-size: 1.8rem;
+	font-weight: 100;
+}
+
+.howTo {
+	margin-top: 1rem;
+	font-size: 2rem;
+	width: 40vw;
+	font-weight: 100;
+	padding-top: 1rem;
+}
+.resetButton {
+	background-color: green;
+	font-family: "Luckiest Guy", cursive;
+	color: white;
+	border: none;
+	width: 15vw;
+	height: 7vh;
+	border-radius: 3rem;
+	font-size: 1.5rem;
+	margin: 2rem;
+}
+
+.resetButton:hover {
+	transform: scale(1.2);
+	cursor: pointer;
 }
 
 .magicBall.clicked {
-  background-image: url("./ball-back.png");
-  cursor: auto;
+	background-image: url("./ball-back.png");
+	cursor: auto;
+	animation: none;
+}
+.magicBall.clicked:hover {
+	cursor: default;
+	animation: none;
 }
 
 .magicBall:hover {
-  animation: horizontal-shaking 0.50s infinite;
-  cursor: grabbing;
+	animation: horizontal-shaking 0.5s infinite;
+	cursor: grabbing;
 }
 
 @keyframes horizontal-shaking {
-  0% { transform: translateX(0) }
-  25% { transform: translateX(10px) }
-  50% { transform: translateX(-10px) }
-  75% { transform: translateX(10px) }
-  100% { transform: translateX(0) }
- }
-
- 
+	0% {
+		transform: translateX(0);
+	}
+	25% {
+		transform: translateX(10px);
+	}
+	50% {
+		transform: translateX(-10px);
+	}
+	75% {
+		transform: translateX(10px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
