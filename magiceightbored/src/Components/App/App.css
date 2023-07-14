@@ -1,0 +1,47 @@
+.App {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  font-size: 18px;
+}
+
+.magicBall {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+  background-image: url("./ball.png");
+  background-size: cover;
+  text-align: center;
+  color: white;
+}
+
+.activity {
+  width: 10vw;
+  font-size: 0.7rem;
+}
+
+.magicBall.clicked {
+  background-image: url("./ball-back.png");
+  cursor: auto;
+}
+
+.magicBall:hover {
+  animation: horizontal-shaking 0.50s infinite;
+  cursor: grabbing;
+}
+
+@keyframes horizontal-shaking {
+  0% { transform: translateX(0) }
+  25% { transform: translateX(10px) }
+  50% { transform: translateX(-10px) }
+  75% { transform: translateX(10px) }
+  100% { transform: translateX(0) }
+ }
+
+ 
